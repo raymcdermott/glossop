@@ -8,9 +8,9 @@
   :global-vars {*warn-on-reflection* true}
   :source-paths ["src" "test"]
   :dependencies
-  [[org.clojure/clojure    "1.7.0"]
-   [org.clojure/core.async "0.1.346.0-17112a-alpha"]
-   [org.clojure/clojurescript  "0.0-3308"]]
+  [[org.clojure/clojure    "1.10.0-beta8"]
+   [org.clojure/core.async "1.10.439"]
+   [org.clojure/clojurescript  "1.10.439"]]
   :clean-targets ["target" "out"]
   :cljsbuild
   {:builds [{:id "glossop"

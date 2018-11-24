@@ -10,7 +10,7 @@
 
 (defn throw-err [e]
   (when (error? e)
-    (throw e))
+    (throw (ex-info ":catching-async" {:exception e})))
   e)
 
 #? (:clj
@@ -28,7 +28,7 @@
           `(cljs.core.async.macros/go
              (try
                ~@body
-               (catch js/Error e#
+               (catch :default e#
                  e#)))
           `(async/go
              (try
